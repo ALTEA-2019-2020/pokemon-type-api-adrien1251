@@ -57,6 +57,6 @@ public class PokemonTypeRepositoryImpl implements PokemonTypeRepository {
 
     @Override
     public List<PokemonType> findAllPokemonType() {
-        return pokemons;
+        return pokemons.stream().sorted().collect(Collectors.toList());
     }
 }

@@ -11,7 +11,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class PokemonType {
+public class PokemonType implements Comparable<PokemonType> {
     private int id;
     private int baseExperience;
     private int height;
@@ -20,4 +20,9 @@ public class PokemonType {
     private Stats stats;
     private int weight;
     private List<String> types;
+
+    @Override
+    public int compareTo(PokemonType o) {
+        return id - o.getId();
+    }
 }

@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "0286ff3d-59ac-4d6a-b46d-e48111aecee2",
+		"name": "ALTAE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/pokemon-types/25",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4d74f10f-c482-40a0-b34d-89515c025725",
+						"exec": [
+							"pm.test(\"Bulbasaur\", function () {\r",
+							"    var bulbasaur = pm.response.json();\r",
+							"    pm.expect(bulbasaur.id).to.eq(1);\r",
+							"    pm.expect(bulbasaur.name).to.eq(\"Bulbasaur\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pokemon-types/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pokemon-types",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/pokemon-types/25 Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4d74f10f-c482-40a0-b34d-89515c025725",
+						"exec": [
+							"pm.test(\"Bulbasaur\", function () {\r",
+							"    var bulbasaur = pm.response.json();\r",
+							"    pm.expect(bulbasaur.id).to.eq(1);\r",
+							"    pm.expect(bulbasaur.name).to.eq(\"Bulizarre\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "fr",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/pokemon-types/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pokemon-types",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/pokemon-types/25 Copy Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4d74f10f-c482-40a0-b34d-89515c025725",
+						"exec": [
+							"pm.test(\"Bulbasaur\", function () {\r",
+							"    var bulbasaur = pm.response.json();\r",
+							"    pm.expect(bulbasaur.id).to.eq(1);\r",
+							"    pm.expect(bulbasaur.name).to.eq(\"Bulizarre\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "fr",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/pokemon-types/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pokemon-types",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/pokemon-types/25 Copy Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4d74f10f-c482-40a0-b34d-89515c025725",
+						"exec": [
+							"pm.test(\"all pokemon types\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.length).to.eq(151);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Bulbasaur\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData[0].name).to.eq(\"Bulbasaur\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Ivysaur\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData[1].name).to.eq(\"Ivysaur\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "fr",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/pokemon-types",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pokemon-types"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
